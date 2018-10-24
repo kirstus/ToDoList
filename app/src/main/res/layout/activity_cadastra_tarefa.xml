@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.matt.todolist.CadastraTarefaActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="#e5bfca"
+        android:text="Adicionar Tarefa"
+        android:gravity="center"
+        android:textSize="40sp"
+        android:textColor="#000000"
+        android:fontFamily="serif-monospace" />
+
+    <EditText
+        android:paddingHorizontal="8dp"
+        android:background="@drawable/retangulo"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Nome da tarefa"
+        android:textColorHint="#767172"
+        android:layout_margin="16dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#220095"
+        android:layout_margin="16dp"
+        android:text="Salvar"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"/>
+
+</LinearLayout>
