@@ -18,6 +18,7 @@
         android:fontFamily="serif-monospace" />
 
     <EditText
+        android:id="@+id/edtNome"
         android:paddingHorizontal="8dp"
         android:background="@drawable/retangulo"
         android:layout_width="match_parent"
@@ -26,6 +27,7 @@
         android:textColorHint="#767172"
         android:layout_margin="16dp"/>
     <Button
+        android:id="@+id/btnSave"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:background="#220095"
