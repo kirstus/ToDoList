@@ -12,9 +12,10 @@ class ListActivity : AppCompatActivity() {
 
     companion object {
         private const val REQUEST_CADASTRO: Int = 1 //para executar o cadastro de contatinho
+        private const val LISTA_TAREFAS: String = "Lista de tarefas" //para salvar e restaurar a lista
     }
 
-    private val tarefasList: MutableList<String> = mutableListOf()
+    private var tarefasList: MutableList<String> = mutableListOf()
 
     var indexTarefaClicada: Int = -1
 
@@ -48,6 +49,21 @@ class ListActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         carregaLista()
+    }
+
+    //salva a lista caso o Android venha a destruir a activity
+    override fun onSaveInstanceState(outState: Bundle?) {
+        super.onSaveInstanceState(outState)
+
+        outState?.putSerializable(LISTA_TAREFAS, tarefasList as ArrayList<String>)
+    }
+
+    //restaura a lista caso o Android venha a destruir a activity
+    override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
+        super.onRestoreInstanceState(savedInstanceState)
+
+        if(savedInstanceState != null)
+            tarefasList = savedInstanceState.getSerializable(LISTA_TAREFAS) as MutableList<String>
     }
 
     fun carregaLista() {
